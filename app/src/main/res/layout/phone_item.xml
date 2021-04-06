@@ -19,15 +19,15 @@
     <EditText
         android:id="@+id/editBrand"
         android:layout_width="wrap_content"
-        android:layout_height="37dp"
+        android:layout_height="36dp"
         android:ems="10"
         android:hint="Бренд"
         android:inputType="textPersonName"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/editImage"
-        app:layout_constraintTop_toTopOf="@+id/editImage" />
+        app:layout_constraintStart_toEndOf="@+id/etModel"
+        app:layout_constraintTop_toTopOf="@+id/etModel" />
 
     <EditText
         android:id="@+id/editModel"
@@ -37,25 +37,27 @@
         android:hint="Модель"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/editBrand"
-        app:layout_constraintTop_toTopOf="@+id/editBrand" />
+        app:layout_constraintStart_toEndOf="@+id/etImage"
+        app:layout_constraintTop_toTopOf="@+id/etImage" />
 
     <TextView
-        android:id="@+id/editOcSystem"
+        android:id="@+id/tvOcSystem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Операционная система:"
-        app:layout_constraintStart_toEndOf="@+id/editImage"
-        app:layout_constraintTop_toBottomOf="@+id/editBrand" />
+        app:layout_constraintEnd_toEndOf="@+id/etBrand"
+        app:layout_constraintStart_toEndOf="@+id/etImage"
+        app:layout_constraintTop_toBottomOf="@+id/etModel" />
 
     <EditText
-        android:id="@+id/editOC"
+        android:id="@+id/etOC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="OC"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/editImage"
-        app:layout_constraintTop_toBottomOf="@+id/editOcSystem" />
+        app:layout_constraintEnd_toEndOf="@+id/tvOcSystem"
+        app:layout_constraintStart_toStartOf="@+id/tvOcSystem"
+        app:layout_constraintTop_toBottomOf="@+id/tvOcSystem" />
 </androidx.constraintlayout.widget.ConstraintLayout>

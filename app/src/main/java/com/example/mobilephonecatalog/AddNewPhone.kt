@@ -24,6 +24,7 @@ class AddNewPhone : AppCompatActivity() {
         binding = ActivityAddNewPhoneBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.btnSave.setOnClickListener {
             Intent().apply {
                 putExtra("EXTRA_BRAND", binding.fieldBrand.text.toString())
@@ -41,11 +42,15 @@ class AddNewPhone : AppCompatActivity() {
             startActivityForResult(intent, IMAGE_CODE)
         }
     }
-
-
-
-//    fun Android(view: View) {
-//     THE_CHOICE_OC =  binding.btnAndroid.toString()
-//    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(resultCode == Activity.RESULT_OK && requestCode == IMAGE_CODE) {
+            imgUri = data?.data
+            binding.btnImage.setImageURI(imgUri)
+        }
+        else{
+            binding.btnImage.setImageURI(Uri.parse("@drawable/phone"))
+        }
+    }
 
 }

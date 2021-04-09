@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.mobilephonecatalog.databinding.ActivityAddNewPhoneBinding
-import com.example.mobilephonecatalog.databinding.ActivityMainBinding
 
 class AddNewPhone : AppCompatActivity() {
 

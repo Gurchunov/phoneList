@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mobilephonecatalog.adapter.Adapter
+import com.example.mobilephonecatalog.data.InitData.initDevicesList
 import com.example.mobilephonecatalog.data.ItemMobile
 import com.example.mobilephonecatalog.databinding.ActivityMainBinding
 
@@ -21,15 +22,20 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var mobileAdapter: Adapter
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        listPhones = initDevicesList(this)
 
         mobileAdapter = Adapter(listPhones)
         binding.rvListPhone.adapter = mobileAdapter
         binding.rvListPhone.layoutManager = LinearLayoutManager(this)
+
+
 
         binding.btnAdd.setOnClickListener {
             Intent(this, AddNewPhone::class.java).also { newIntent ->

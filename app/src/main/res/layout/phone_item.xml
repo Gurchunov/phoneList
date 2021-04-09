@@ -17,36 +17,35 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editBrand"
+        android:id="@+id/etBrand"
         android:layout_width="wrap_content"
         android:layout_height="36dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Бренд"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/etModel"
-        app:layout_constraintTop_toTopOf="@+id/etModel" />
+        app:layout_constraintStart_toEndOf="@+id/etImage"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editModel"
-        android:layout_width="wrap_content"
+        android:id="@+id/etModel"
+        android:layout_width="145dp"
         android:layout_height="36dp"
         android:ems="10"
         android:hint="Модель"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/etImage"
-        app:layout_constraintTop_toTopOf="@+id/etImage" />
+        app:layout_constraintStart_toEndOf="@+id/etBrand"
+        app:layout_constraintTop_toTopOf="@+id/etBrand" />
 
     <TextView
         android:id="@+id/tvOcSystem"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="19dp"
         android:text="Операционная система:"
-        app:layout_constraintEnd_toEndOf="@+id/etBrand"
-        app:layout_constraintStart_toEndOf="@+id/etImage"
+        app:layout_constraintEnd_toEndOf="@+id/etModel"
+        app:layout_constraintStart_toStartOf="@+id/etBrand"
         app:layout_constraintTop_toBottomOf="@+id/etModel" />
 
     <EditText
